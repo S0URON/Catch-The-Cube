@@ -1,0 +1,88 @@
+h2 {
+	font-family: Helvetica;
+	font-size: 20px;
+	color: #000;
+	text-align: center;
+	margin: auto;
+	-webkit-text-fill-color: silver;
+	-webkit-text-stroke-width:2px;
+	text-shadow: 3px 3px 3px gray;
+	cursor: default;
+}
+a {
+	text-decoration: none;
+}
+p  {
+    font-family:comic sans MS;
+    text-align: center;
+    margin: auto;
+	font-size: 45px;
+	color: black;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke-width:2px;
+	text-decoration: none;
+	letter-spacing: 2px;
+	background-image: linear-gradient(to right , #f00, #ff0, #0ff, #0f0, #00f);	
+	animation: animate 20s linear infinite;
+	-webkit-background-clip: text;
+	background-size: 1000%;
+}
+@keyframes animate
+{
+	0%
+	{
+		background-position: 0% 100%;
+	}
+	50%
+	{
+		background-position: 100% 0%;
+	}
+	100%
+	{
+		background-position: 0% 100%;
+	}
+}
+body {
+	background-repeat: repeat-y;
+	background-size: cover;
+}
+
+
+.button {
+  border-radius: 4px;
+  background-color:red;
+  border: none;
+  color: #FFFFFF;
+  
+  font-size: 20px;
+  padding: 10px;
+  width: 75px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 0px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
